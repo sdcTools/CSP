@@ -1,9 +1,9 @@
 ######################################################################################
 # Makefile for building: CSPlibraries
-# make -f MyMakeFile CPLEX to produce CSPlibCPLEX
-# make -f MyMakeFile XPRESS to produce CSPlibXPRESS
-# make -f MyMakeFile SCIP to produce CSPlibSCIP
-# make -f MyMakeFile to produce all three libraries in one go
+# "make CPLEX" to produce CSPlibCPLEX
+# "make XPRESS" to produce CSPlibXPRESS
+# "make SCIP" to produce CSPlibSCIP
+# "make" to produce all three libraries in one go
 ######################################################################################
 
 ####### Compiler, tools and options
