@@ -1,5 +1,6 @@
 ######################################################################################
 # Makefile for building: CSPlibraries
+# Usage:
 # "make CPLEX" to produce CSPlibCPLEX
 # "make XPRESS" to produce CSPlibXPRESS
 # "make SCIP" to produce CSPlibSCIP
