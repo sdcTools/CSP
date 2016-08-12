@@ -20,8 +20,10 @@
 
 #include <iostream>
 #include <fstream>
-#include "../../tauhitas/src/IProgressListener.h"
-#include "../../tauhitas/src/ICallback.h"
+
+// Header files from tauhitas for callback facility with Java
+#include "IProgressListener.h"
+#include "ICallback.h"
 
 // Different implementation for different solvers
 // Assigned to different namespaces to be able to choose solver at runtime
