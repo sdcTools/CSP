@@ -59,6 +59,7 @@ CPLEX :
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
@@ -83,6 +84,7 @@ XPRESS :
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
@@ -107,6 +109,7 @@ SCIP :
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
+	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}	
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
