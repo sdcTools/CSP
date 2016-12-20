@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="97">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -78,26 +78,10 @@
       <compileType>
         <cTool>
           <commandlineTool>g++</commandlineTool>
-          <incDir>
-            <pElem>../JJSource/InstallSCIP/scip-3.0.2/src</pElem>
-            <pElem>../JJSource/InstallSCIP/scip-3.0.2/lib/clp.mingw.x86.gnu.opt/Clp/src</pElem>
-            <pElem>../XPress</pElem>
-            <pElem>../Cplex/include/ilcplex</pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>MICROSOFT2</Elem>
-            <Elem>VSCIP</Elem>
-          </preprocessorList>
           <warningLevel>2</warningLevel>
         </cTool>
         <linkerTool>
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/CSPlibSCIP.${CND_DLIB_EXT}</output>
-          <linkerAddLib>
-            <pElem>../JJSource/InstallSCIP/scip-3.0.2/lib</pElem>
-            <pElem>../Cplex/lib</pElem>
-            <pElem>../XPress</pElem>
-            <pElem>../JJSource/InstallSCIP/Clp-1.15.5/lib</pElem>
-          </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>cplex75</linkerLibLibItem>
             <linkerLibLibItem>lpiclp-3.0.2.mingw.x86.gnu.opt</linkerLibLibItem>

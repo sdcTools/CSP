@@ -29,7 +29,7 @@ INCTAUPATH = -I../tauhitas/src
 OBJECTS     = ${OBJECTDIR}/src/Cspbridg.o ${OBJECTDIR}/src/Cspcard.o ${OBJECTDIR}/src/Cspmain.o ${OBJECTDIR}/src/Cspnet.o ${OBJECTDIR}/src/Jjsolver.o ${OBJECTDIR}/src/MT1RC.o ${OBJECTDIR}/src/My_time.o ${OBJECTDIR}/src/cspback.o ${OBJECTDIR}/src/cspbranc.o ${OBJECTDIR}/src/cspcapa.o ${OBJECTDIR}/src/cspcover.o ${OBJECTDIR}/src/cspdebug.o ${OBJECTDIR}/src/cspgomo.o ${OBJECTDIR}/src/cspheur.o ${OBJECTDIR}/src/cspprep.o ${OBJECTDIR}/src/cspprice.o ${OBJECTDIR}/src/cspsep.o ${OBJECTDIR}/src/cspsolve.o
 
 CSPCPX = CSPlibCPLEX
-CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2
+CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2 
 CPXDIR = ../Cplex
 CPXINC = -I$(CPXDIR)/include/ilcplex
 CPXLIBS = -L$(CPXDIR)/lib -lcplex75
@@ -78,7 +78,7 @@ CPLEX :
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/cspprice.o src/cspprice.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
-	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT} ${OBJECTS} $(CPXFLAGS) ${CPXLIBS} -shared
+	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT} ${OBJECTS} $(CPXFLAGS) ${CPXLIBS} -shared -static-libgcc -static-libstdc++
 
 XPRESS :
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
@@ -103,7 +103,7 @@ XPRESS :
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/cspprice.o src/cspprice.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
-	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT} ${OBJECTS} $(XPRFLAGS) ${XPRLIBS} -shared
+	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT} ${OBJECTS} $(XPRFLAGS) ${XPRLIBS} -shared -static-libgcc -static-libstdc++
 
 SCIP : 
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
@@ -128,7 +128,7 @@ SCIP :
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/cspprice.o src/cspprice.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
-	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT} ${OBJECTS} $(SCIPFLAGS) ${SCIPLIBS} -shared
+	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT} ${OBJECTS} $(SCIPFLAGS) ${SCIPLIBS} -shared -static-libgcc -static-libstdc++
 
 clean:
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
