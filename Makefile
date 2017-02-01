@@ -30,7 +30,7 @@ OBJECTS     = ${OBJECTDIR}/src/Cspbridg.o ${OBJECTDIR}/src/Cspcard.o ${OBJECTDIR
 
 CSPCPX = CSPlibCPLEX
 CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2 
-CPXDIR = ../Cplex
+CPXDIR = ../Cplex/Cplex75
 CPXINC = -I$(CPXDIR)/include/ilcplex
 CPXLIBS = -L$(CPXDIR)/lib -lcplex75
 
@@ -79,6 +79,7 @@ CPLEX :
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
 	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT} ${OBJECTS} $(CPXFLAGS) ${CPXLIBS} -shared -static-libgcc -static-libstdc++
+	cp ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT} ../tauargus
 
 XPRESS :
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
@@ -104,6 +105,7 @@ XPRESS :
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
 	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT} ${OBJECTS} $(XPRFLAGS) ${XPRLIBS} -shared -static-libgcc -static-libstdc++
+	cp ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT} ../tauargus
 
 SCIP : 
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
@@ -129,7 +131,8 @@ SCIP :
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/cspsep.o src/cspsep.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/cspsolve.o src/cspsolve.c
 	$(CXX) -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT} ${OBJECTS} $(SCIPFLAGS) ${SCIPLIBS} -shared -static-libgcc -static-libstdc++
-
+	cp ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT} ../tauargus
+	
 clean:
 	$(RM) -r ${CND_BUILDDIR}/${CND_CONF}
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/*.${CND_DLIB_EXT}
