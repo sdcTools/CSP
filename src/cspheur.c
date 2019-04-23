@@ -89,8 +89,9 @@ int heuristic(int improv)
     for(l=0;l<Rncells;l++)
         if( oldval[l]>ZERO )
             status[l]=1;
-	for(l=0;l<nbetter;l++)
-		status[ better[l]->index ]=1;
+    
+    for(l=0;l<nbetter;l++)
+	status[ better[l]->index ]=1;
     load_2network(status);
     free( status );
     status = NULL; /*PWOF*/
@@ -126,7 +127,7 @@ int heuristic(int improv)
             std::cout << "WARNING:   not enough cells in the initial maximal set, or infeasible" << std::endl;
 #endif
             weight = INF;
-			nsup   = -1;
+	    nsup   = -1;
             goto SALIR;
         }
 #ifdef STAMP        
@@ -481,7 +482,7 @@ static void   load_2network(char *status)
 #endif
 
 #ifdef CHECKLP
-        JJmpswrite(Nlp,"sdcnet.mps");
+        JJmpswrite(Nlp,fmpsnet);
 #endif
 ////        JJlpwrite(Nlp,"sdcnet.lp");
 }
@@ -580,7 +581,7 @@ static double    protection_2level(VARIABLE  *var,int type,double goal,int mode)
 		}			
 
         puts(" it was not possible to solve with NETOPT ");
-        JJlpwrite(Nlp,"sdcnet.lp");
+        JJlpwrite(Nlp,fsdcnetlp);
         CSPexit(EXIT_LPSOLVER); //exit(1);
     }
 

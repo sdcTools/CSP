@@ -82,17 +82,6 @@
         </cTool>
         <linkerTool>
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/CSPlibSCIP.${CND_DLIB_EXT}</output>
-          <linkerLibItems>
-            <linkerLibLibItem>cplex75</linkerLibLibItem>
-            <linkerLibLibItem>lpiclp-3.0.2.mingw.x86.gnu.opt</linkerLibLibItem>
-            <linkerLibLibItem>nlpi.cppad-3.0.2.mingw.x86.gnu.opt</linkerLibLibItem>
-            <linkerLibLibItem>objscip-3.0.2.mingw.x86.gnu.opt</linkerLibLibItem>
-            <linkerLibLibItem>scip-3.0.2.mingw.x86.gnu.opt</linkerLibLibItem>
-            <linkerLibLibItem>Clp</linkerLibLibItem>
-            <linkerLibLibItem>CoinUtils</linkerLibLibItem>
-            <linkerLibLibItem>xprl</linkerLibLibItem>
-            <linkerLibLibItem>xprs</linkerLibLibItem>
-          </linkerLibItems>
         </linkerTool>
       </compileType>
       <item path="../CSP/src/CSPGLOB.H" ex="false" tool="3" flavor2="0">

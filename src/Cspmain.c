@@ -12,7 +12,7 @@
 /*                                                  */
 /* Last modified September 10, 2001                 */
 /****************************************************/
-
+#define STAMP
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -166,7 +166,9 @@ void PPCSPSetFileNames(const char* dir)
 	fbranch = (char*) malloc((strlen(dir) + 15)*sizeof(char));
         fproblemlp = (char*) malloc((strlen(dir) + 15)*sizeof(char));
         fsdcnetlp = (char*) malloc((strlen(dir) + 15)*sizeof(char));
+        fsdclp = (char*) malloc((strlen(dir) +15)*sizeof(char));
         fCSPlog = (char*) malloc((strlen(dir) + 15)*sizeof(char));
+        fpartial = (char*) malloc((strlen(dir)+15)*sizeof(char));
 	strcpy(fsolution,dir);
 	strcat(fsolution,"cspSCIP.sol");
 	strcpy(fheuristi,dir);
@@ -179,6 +181,12 @@ void PPCSPSetFileNames(const char* dir)
 	strcat(fproblemlp,"problem.lp");
         strcpy(fsdcnetlp,dir);
 	strcat(fsdcnetlp,"sdcnet.lp");
+        strcpy(fsdclp,dir);
+	strcat(fsdclp,"sdc.lp");
+        strcpy(fpartial,dir);
+	strcat(fpartial,"partial.sol"); 
+        strcpy(fmpsnet,dir);
+	strcat(fmpsnet,"sdcnet.mps"); 
         strcpy(fCSPlog,dir);
         strcat(fCSPlog,"CSPlogfile.txt");
 }
@@ -197,7 +205,8 @@ void PPCSPFreeFileNames()
         fproblemlp = NULL; /*PWOF*/
         free(fsdcnetlp);
         fsdcnetlp = NULL; /*PWOF*/
-        free(fCSPlog);
+        free(fsdclp);
+        fsdclp = NULL; /*PWOF*/        free(fCSPlog);
         fCSPlog = NULL; /*PWOF*/
 }
 

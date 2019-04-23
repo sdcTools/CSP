@@ -835,7 +835,7 @@ PRIC:
             return( (double)upperb );
         default:            
             std::cout << " ERROR: pstat=" << JJgetstat(lp)  << std::endl;
-            JJlpwrite(lp,"sdc.lp");
+            JJlpwrite(lp,fsdclp);
             CSPexit(EXIT_ERROR); //exit(1);
     }
     return(0.0);

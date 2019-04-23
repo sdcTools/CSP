@@ -71,7 +71,7 @@ void       separa(int        *card,CONSTRAINT **stack)
     if( *card ) return;
 
 
-    write_sol("partial.sol");
+    write_sol(fpartial);
     range = 0.0;
     for(k=0;k<nsupport;k++){
         var = support[k];

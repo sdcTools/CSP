@@ -23,27 +23,27 @@ CND_BUILDDIR=build
 
 # Object Directory
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
-INCTAUPATH = -I../tauhitas/src
+INCTAUPATH = -I../tauhitas/src # for inclusion of ICallback.h and IProgressListener.h
 
 ####### Object Files
 OBJECTS     = ${OBJECTDIR}/src/Cspbridg.o ${OBJECTDIR}/src/Cspcard.o ${OBJECTDIR}/src/Cspmain.o ${OBJECTDIR}/src/Cspnet.o ${OBJECTDIR}/src/Jjsolver.o ${OBJECTDIR}/src/MT1RC.o ${OBJECTDIR}/src/My_time.o ${OBJECTDIR}/src/cspback.o ${OBJECTDIR}/src/cspbranc.o ${OBJECTDIR}/src/cspcapa.o ${OBJECTDIR}/src/cspcover.o ${OBJECTDIR}/src/cspdebug.o ${OBJECTDIR}/src/cspgomo.o ${OBJECTDIR}/src/cspheur.o ${OBJECTDIR}/src/cspprep.o ${OBJECTDIR}/src/cspprice.o ${OBJECTDIR}/src/cspsep.o ${OBJECTDIR}/src/cspsolve.o
 
 CSPCPX = CSPlibCPLEX
-CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2 
-CPXDIR = ../Cplex/Cplex75
+CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2 -m32
+CPXDIR = ../Solvers/Cplex/Cplex75
 CPXINC = -I$(CPXDIR)/include/ilcplex
 CPXLIBS = -L$(CPXDIR)/lib -lcplex75
 
 CSPXPR = CSPlibXPRESS
-XPRFLAGS = -ggdb -Wall -DXPRESS_13 -DMICROSOFT2
-XPRDIR = ../XPress
+XPRFLAGS = -ggdb -Wall -DXPRESS_13 -DMICROSOFT2 -m32
+XPRDIR = ../Solvers/XPress
 XPRINC = -I$(XPRDIR)
 XPRLIBS	= -L$(XPRDIR) -lxprl -lxprs
 
 CSPSCIP = CSPlibSCIP
-SCIPFLAGS = -ggdb -Wall -DVSCIP -DMICROSOFT2
-DIRLPS	    = ../scip-3.1.1
-DIRSOPLEX   = ../soplex-2.0.1
+SCIPFLAGS = -ggdb -Wall -DVSCIP -DMICROSOFT2 -m32
+DIRLPS	    = ../Solvers/scip-3.1.1
+DIRSOPLEX   = ../Solvers/soplex-2.0.1
 SOPLEXLIB   = soplex-2.0.1.mingw.x86.gnu.opt
 NLPILIB     = nlpi.cppad-3.1.1.mingw.x86.gnu.opt
 SCIPLIB     = scip-3.1.1.mingw.x86.gnu.opt
