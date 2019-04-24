@@ -440,7 +440,7 @@ int  PPCSPoptimize(IProgressListener* ProgressListener)
         {
                 ProgressListener->UpdateUB(upperb);
                 ProgressListener->UpdateLB(lowerb);
-                ProgressListener->UpdateDiscrepancy((upperb-lowerb)/lowerb);
+                ProgressListener->UpdateDiscrepancy(100*(upperb-lowerb)/lowerb); // percentages
                 ProgressListener->UpdateTime((int) (seconds()-tstart));
         }
         
