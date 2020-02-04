@@ -26,7 +26,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 INCTAUPATH = -I../tauhitas/src # for inclusion of ICallback.h and IProgressListener.h
 
 ####### Object Files
-OBJECTS     = ${OBJECTDIR}/src/Cspbridg.o ${OBJECTDIR}/src/Cspcard.o ${OBJECTDIR}/src/Cspmain.o ${OBJECTDIR}/src/Cspnet.o ${OBJECTDIR}/src/Jjsolver.o ${OBJECTDIR}/src/MT1RC.o ${OBJECTDIR}/src/My_time.o ${OBJECTDIR}/src/cspback.o ${OBJECTDIR}/src/cspbranc.o ${OBJECTDIR}/src/cspcapa.o ${OBJECTDIR}/src/cspcover.o ${OBJECTDIR}/src/cspdebug.o ${OBJECTDIR}/src/cspgomo.o ${OBJECTDIR}/src/cspheur.o ${OBJECTDIR}/src/cspprep.o ${OBJECTDIR}/src/cspprice.o ${OBJECTDIR}/src/cspsep.o ${OBJECTDIR}/src/cspsolve.o
+OBJECTS     = ${OBJECTDIR}/src/Cspbridg.o ${OBJECTDIR}/src/Cspcard.o ${OBJECTDIR}/src/Cspmain.o ${OBJECTDIR}/src/Cspnet.o ${OBJECTDIR}/src/Jjsolver.o ${OBJECTDIR}/src/MT1RC.o ${OBJECTDIR}/src/My_time.o ${OBJECTDIR}/src/cspback.o ${OBJECTDIR}/src/cspbranc.o ${OBJECTDIR}/src/cspcapa.o ${OBJECTDIR}/src/cspcover.o ${OBJECTDIR}/src/cspdebug.o ${OBJECTDIR}/src/cspgomo.o ${OBJECTDIR}/src/cspheur.o ${OBJECTDIR}/src/cspprep.o ${OBJECTDIR}/src/cspprice.o ${OBJECTDIR}/src/cspsep.o ${OBJECTDIR}/src/cspsolve.o ${OBJECTDIR}/src/Versioninfo.o
 
 CSPCPX = CSPlibCPLEX
 CPXFLAGS = -ggdb -Wall -DCPLEX7 -DMICROSOFT2 -m32
@@ -60,6 +60,7 @@ CPLEX :
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPCPX}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	windres ./src/Versioninfo.rc ${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/src/Versioninfo.o
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
@@ -86,6 +87,7 @@ XPRESS :
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPXPR}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
+	windres ./src/Versioninfo.rc ${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/src/Versioninfo.o
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(XPRFLAGS) $(XPRINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
@@ -112,6 +114,7 @@ SCIP :
 	$(RM) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/${CSPSCIP}.${CND_DLIB_EXT}
 	${MKDIR} -p ${OBJECTDIR}/src
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}	
+	windres ./src/Versioninfo.rc ${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/src/Versioninfo.o
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/Cspbridg.o src/Cspbridg.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) -o ${OBJECTDIR}/src/Cspcard.o src/Cspcard.c
 	$(CXX) -c $(SCIPFLAGS) $(SCIPINC) $(INCTAUPATH) -o ${OBJECTDIR}/src/Cspmain.o src/Cspmain.c
