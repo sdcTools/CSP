@@ -12,7 +12,7 @@
 /*                                                  */
 /* Last modified September 10, 2001                 */
 /****************************************************/
-#define STAMP
+//#define STAMP
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -311,7 +311,7 @@ int PPCSPGetIntegerConstant(const int ConstName)
 
 int  PPCSPoptimize(IProgressListener* ProgressListener)
 {
-    int        k,lcuts,upperb_root,upperb_init,nbr,old_ub,root,lprows,rowsinit,initpl;
+    int        k,lcuts,upperb_root=0,upperb_init=0,nbr,old_ub,root,lprows,rowsinit,initpl;
     CONSTRAINT *stack[MAX_CUTS_ITER];
 
     float      t1,tprep,theur0,theur1,troot,tseparation,tstart;

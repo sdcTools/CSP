@@ -786,7 +786,9 @@ static void potential_innecesary(int    *nlist,int    *list)
     status = NULL; /*PWOF*/
 
 
-    qsort( (char *)list , *nlist , sizeof(int *) , sort_cells );
+    //qsort( (char *)list , *nlist , sizeof(int *) , sort_cells );
+    //qsort( (char *)list , *nlist , sizeof(int) , sort_cells ); // list consists of int, not int*
+    qsort( (void *)list , *nlist , sizeof(int) , sort_cells );
 }
 
 

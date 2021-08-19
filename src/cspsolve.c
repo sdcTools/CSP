@@ -438,6 +438,12 @@ static int add_row(CONSTRAINT *con,double *rhs,char   *sense,int    *rmatind,dou
     int      l = 0;
     VARIABLE **stack;
     double   *coef;
+    
+    // PWOF intialising
+    coef=NULL;
+    stack=NULL;
+    card=0;
+    //
 
     if( con->lp != -1 ){        
         std::cout << "ERROR: constraints already in the LP (" << con->lp << ")" << std::endl;
@@ -729,6 +735,7 @@ void rem_cols(int         card,VARIABLE    **stack)
     int      k;
     struct   PRICE *p,*anterior,*posterior;
 
+    anterior = (struct PRICE*) malloc(sizeof(struct PRICE)); // PWOF added memory allocation
 
     if (card==0) return;
 #ifdef STAMP
