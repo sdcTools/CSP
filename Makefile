@@ -55,7 +55,7 @@ OBJECTS          = $(OBJECTDIR)/src/Cspbridg.o $(OBJECTDIR)/src/Cspcard.o $(OBJE
 STAMP            =#-DSTAMP
 
 CSPCPX           = CSPlibCPLEX
-CPXFLAGS         = -ggdb -g -Og -Wall -DCPLEX7 -DMICROSOFT2 $(BITS)
+CPXFLAGS         = -g -O2 -Wall -DCPLEX7 -DMICROSOFT2 $(BITS)
 ifeq ($(32BIT),false)
     CPXDIR       = ../Solvers/Cplex/Cplex125/Windows/64bits
     CPXLIBS      = -L$(CPXDIR) -lcplex125
@@ -66,13 +66,13 @@ endif
 CPXINC           = -I$(CPXDIR)/include/ilcplex
 
 CSPXPR           = CSPlibXPRESS
-XPRFLAGS         = -ggdb -g -Og -Wall -DXPRESS_13 -DMICROSOFT2 $(BITS)
+XPRFLAGS         = -g -O2 -Wall -DXPRESS_13 -DMICROSOFT2 $(BITS)
 XPRDIR           = ../Solvers/XPress/XPress_28/$(ARCH)
 XPRINC           = -I$(XPRDIR)
 XPRLIBS          = -L$(XPRDIR) -lxprl -lxprs
 
 CSPSCIP          = CSPlibSCIP
-SCIPFLAGS        = -ggdb -g -Og -Wall -DVSCIP -Dsoplex -DMICROSOFT2 $(BITS)
+SCIPFLAGS        = -g -O2 -Wall -DVSCIP -Dsoplex -DMICROSOFT2 $(BITS)
 DIRLPS           = ../Solvers/scip-3.1.1
 DIRSOPLEX        = ../Solvers/soplex-2.0.1
 SOPLEXLIB        = soplex-2.0.1.mingw.$(ARCH).gnu.opt
