@@ -52,10 +52,13 @@ OBJECTS          = $(OBJECTDIR)/src/Cspbridg.o $(OBJECTDIR)/src/Cspcard.o $(OBJE
                    $(OBJECTDIR)/src/cspprice.o $(OBJECTDIR)/src/cspsep.o $(OBJECTDIR)/src/cspsolve.o \
                    $(OBJECTDIR)/src/Versioninfo.o
 
-STAMP            =#-DSTAMP
+STAMP            =# -DSTAMP
+
+CXXFLAGS	 = -g -O2 -Wall -DMICROSOFT2 $(BITS)
+#CXXFLAGS         = -ggdb -O0 -Wall -DMICROSOFT2 $(BITS)
 
 CSPCPX           = CSPlibCPLEX
-CPXFLAGS         = -g -O2 -Wall -DCPLEX7 -DMICROSOFT2 $(BITS)
+CPXFLAGS         = $(CXXFLAGS) -DCPLEX7
 ifeq ($(32BIT),false)
     CPXDIR       = ../Solvers/Cplex/Cplex125/Windows/64bits
     CPXLIBS      = -L$(CPXDIR) -lcplex125
@@ -66,13 +69,13 @@ endif
 CPXINC           = -I$(CPXDIR)/include/ilcplex
 
 CSPXPR           = CSPlibXPRESS
-XPRFLAGS         = -g -O2 -Wall -DXPRESS_13 -DMICROSOFT2 $(BITS)
+XPRFLAGS         = $(CXXFLAGS) -DXPRESS_13
 XPRDIR           = ../Solvers/XPress/XPress_28/$(ARCH)
 XPRINC           = -I$(XPRDIR)
 XPRLIBS          = -L$(XPRDIR) -lxprl -lxprs
 
 CSPSCIP          = CSPlibSCIP
-SCIPFLAGS        = -g -O2 -Wall -DVSCIP -Dsoplex -DMICROSOFT2 $(BITS)
+SCIPFLAGS        = $(CXXFLAGS) -DVSCIP -Dsoplex
 DIRLPS           = ../Solvers/scip-3.1.1
 DIRSOPLEX        = ../Solvers/soplex-2.0.1
 SOPLEXLIB        = soplex-2.0.1.mingw.$(ARCH).gnu.opt
@@ -91,17 +94,17 @@ CPLEX :
 	$(MKDIR) -p $(OBJECTDIR)/src
 	$(MKDIR) -p $(CND_DISTDIR)/$(CND_CONF)/$(CND_PLATFORM)
 	$(WINDRES) ./src/Versioninfo.rc $(CND_BUILDDIR)/$(CND_CONF)/$(CND_PLATFORM)/src/Versioninfo.o
-	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/Cspbridg.o src/Cspbridg.c
-	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/Cspcard.o src/Cspcard.c
-	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/Cspmain.o src/Cspmain.c
-	$(CXX) -c $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/Cspnet.o src/Cspnet.c
+	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/Cspbridg.o src/Cspbridg.c
+	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/Cspcard.o src/Cspcard.c
+	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/Cspmain.o src/Cspmain.c
+	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/Cspnet.o src/Cspnet.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/Jjsolver.o src/Jjsolver.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/MT1RC.o src/MT1RC.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/My_time.o src/My_time.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/cspback.o src/cspback.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/cspbranc.o src/cspbranc.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/cspcapa.o src/cspcapa.c
-	$(CXX) -c $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/cspcover.o src/cspcover.c
+	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/cspcover.o src/cspcover.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) -o $(OBJECTDIR)/src/cspdebug.o src/cspdebug.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/cspgomo.o src/cspgomo.c
 	$(CXX) -c $(STAMP) $(CPXFLAGS) $(CPXINC) $(INCTAUPATH) -o $(OBJECTDIR)/src/cspheur.o src/cspheur.c

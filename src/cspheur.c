@@ -120,7 +120,7 @@ int heuristic(int improv)
 #ifdef STAMP        
         if(k%1000==0) std::cout << " " << k;
 #endif        
-        obj = protection_2level(pro->sen->var,pro->sense,pro->level,1);        
+        obj = protection_2level(pro->sen->var,pro->sense,pro->level,1);  // k==2 in problem subtable      
 
         if( obj+ZERO>=BIGVALUE ){
 #ifdef STAMP        
@@ -159,7 +159,7 @@ int heuristic(int improv)
         }
     update_heuristic(weight,nsup,sup);
     free( (void*)sup );
-    sup = NULL; /*PWOF*/
+    //sup = NULL; /*PWOF*/
 
     if( !improv ) goto SALIR;
 
@@ -236,7 +236,7 @@ int heuristic(int improv)
         }
     update_heuristic(weight,nsup,sup);
     free( (void*)sup );
-    sup = NULL; /*PWOF*/
+    //sup = NULL; /*PWOF*/
 
 SALIR:
 

@@ -80,7 +80,7 @@
         <cTool>
           <commandlineTool>g++</commandlineTool>
           <preprocessorList>
-            <Elem>CPLEX5</Elem>
+            <Elem>CPLEX7</Elem>
             <Elem>VSCIP</Elem>
             <Elem>XPRESS_13</Elem>
             <Elem>soplex</Elem>
@@ -89,7 +89,7 @@
         </cTool>
         <ccTool>
           <preprocessorList>
-            <Elem>CPLEX5</Elem>
+            <Elem>CPLEX7</Elem>
             <Elem>VSCIP</Elem>
             <Elem>XPRESS_13</Elem>
           </preprocessorList>

@@ -10,12 +10,12 @@ BEGIN
     BEGIN
       VALUE "CompanyName", ""
       VALUE "FileDescription", "Cell Suppression Module for tau-Argus"
-      VALUE "FileVersion", "1.0.0.3"
+      VALUE "FileVersion", "1.0.0.4"
       VALUE "InternalName", ""
       VALUE "LegalCopyright", ""
       VALUE "OriginalFilename", "CSP.dll"
       VALUE "ProductName", "CSP.dll"
-      VALUE "ProductVersion", "1.0.0.3"
+      VALUE "ProductVersion", "1.0.0.4"
     END
   END
   BLOCK "VarFileInfo"

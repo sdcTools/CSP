@@ -157,7 +157,8 @@ static CONSTRAINT *cover_constraint(CONSTRAINT *con)
     }
 
     if(nitem>1){
-        qsort( (char *)item , nitem , sizeof(ITEM) , sort_item );
+        //qsort( (char *)item , nitem , sizeof(ITEM) , sort_item );
+        qsort( (void *)item , nitem , sizeof(ITEM) , sort_item );
 
         x =(int *)malloc( (nitem+2)*sizeof(int) );
         if (x==NULL){            

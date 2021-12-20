@@ -82,92 +82,92 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/CSPlibSCIP.${CND_DLIB_EXT}: ${OBJECTF
 ${OBJECTDIR}/_ext/637b3e6/Cspbridg.o: ../CSP/src/Cspbridg.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspbridg.o ../CSP/src/Cspbridg.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspbridg.o ../CSP/src/Cspbridg.c
 
 ${OBJECTDIR}/_ext/637b3e6/Cspcard.o: ../CSP/src/Cspcard.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspcard.o ../CSP/src/Cspcard.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspcard.o ../CSP/src/Cspcard.c
 
 ${OBJECTDIR}/_ext/637b3e6/Cspmain.o: ../CSP/src/Cspmain.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspmain.o ../CSP/src/Cspmain.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspmain.o ../CSP/src/Cspmain.c
 
 ${OBJECTDIR}/_ext/637b3e6/Cspnet.o: ../CSP/src/Cspnet.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspnet.o ../CSP/src/Cspnet.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Cspnet.o ../CSP/src/Cspnet.c
 
 ${OBJECTDIR}/_ext/637b3e6/Jjsolver.o: ../CSP/src/Jjsolver.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Jjsolver.o ../CSP/src/Jjsolver.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/Jjsolver.o ../CSP/src/Jjsolver.c
 
 ${OBJECTDIR}/_ext/637b3e6/MT1RC.o: ../CSP/src/MT1RC.C
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -DCPLEX5 -DVSCIP -DXPRESS_13  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/MT1RC.o ../CSP/src/MT1RC.C
+	$(COMPILE.cc) -g -DCPLEX7 -DVSCIP -DXPRESS_13  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/MT1RC.o ../CSP/src/MT1RC.C
 
 ${OBJECTDIR}/_ext/637b3e6/My_time.o: ../CSP/src/My_time.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/My_time.o ../CSP/src/My_time.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/My_time.o ../CSP/src/My_time.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspback.o: ../CSP/src/cspback.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspback.o ../CSP/src/cspback.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspback.o ../CSP/src/cspback.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspbranc.o: ../CSP/src/cspbranc.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspbranc.o ../CSP/src/cspbranc.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspbranc.o ../CSP/src/cspbranc.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspcapa.o: ../CSP/src/cspcapa.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspcapa.o ../CSP/src/cspcapa.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspcapa.o ../CSP/src/cspcapa.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspcover.o: ../CSP/src/cspcover.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspcover.o ../CSP/src/cspcover.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspcover.o ../CSP/src/cspcover.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspdebug.o: ../CSP/src/cspdebug.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspdebug.o ../CSP/src/cspdebug.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspdebug.o ../CSP/src/cspdebug.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspgomo.o: ../CSP/src/cspgomo.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspgomo.o ../CSP/src/cspgomo.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspgomo.o ../CSP/src/cspgomo.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspheur.o: ../CSP/src/cspheur.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspheur.o ../CSP/src/cspheur.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspheur.o ../CSP/src/cspheur.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspprep.o: ../CSP/src/cspprep.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspprep.o ../CSP/src/cspprep.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspprep.o ../CSP/src/cspprep.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspprice.o: ../CSP/src/cspprice.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspprice.o ../CSP/src/cspprice.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspprice.o ../CSP/src/cspprice.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspsep.o: ../CSP/src/cspsep.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspsep.o ../CSP/src/cspsep.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspsep.o ../CSP/src/cspsep.c
 
 ${OBJECTDIR}/_ext/637b3e6/cspsolve.o: ../CSP/src/cspsolve.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/637b3e6
 	${RM} "$@.d"
-	$(COMPILE.c) -g -Wall -DCPLEX5 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspsolve.o ../CSP/src/cspsolve.c
+	$(COMPILE.c) -g -Wall -DCPLEX7 -DVSCIP -DXPRESS_13 -Dsoplex  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/637b3e6/cspsolve.o ../CSP/src/cspsolve.c
 
 # Subprojects
 .build-subprojects:
