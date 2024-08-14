@@ -58,15 +58,15 @@ CXXFLAGS	 = -g -O2 -Wall -DMICROSOFT2 $(BITS)
 #CXXFLAGS         = -ggdb -O0 -Wall -DMICROSOFT2 $(BITS)
 
 CSPCPX           = CSPlibCPLEX
-CPXFLAGS         = $(CXXFLAGS) -DCPLEX7
+CPXFLAGS         = $(CXXFLAGS) -DCPLEX7 -DBUILD_CPXSTATIC
 ifeq ($(32BIT),false)
     CPXDIR       = ../Solvers/Cplex/Cplex125/Windows/64bits
     CPXLIBS      = -L$(CPXDIR) -lcplex125
 else
     #CPXDIR       = ../Solvers/Cplex/Cplex75
     #CPXLIBS      = -L$(CPXDIR)/lib -lcplex75
-    CPXDIR       = ../Solvers/Cplex/Cplex122
-    CPXLIBS      = -L$(CPXDIR)/lib -lcplex122
+    CPXDIR       = ../Solvers/Cplex/Cplex125/Windows/32bits
+    CPXLIBS      = -L$(CPXDIR) -lcplex125
 endif
 CPXINC           = -I$(CPXDIR)/include/ilcplex
 

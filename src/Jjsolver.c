@@ -461,23 +461,23 @@ JJLPptr *lp)
    int   status;
 
    if ( lp != NULL ) {
-//      status = CPXunloadprob ( Env , lp);
+//    status = CPXunloadprob ( Env , lp);
 //    Modified on December 2006 to link with CPLEX 10
       status = CPXfreeprob ( CPLEXv::Env , lp);
       if ( status ) {
-         fprintf (stderr, "CPXunloadprob failed, error code %d.\n", status);
-         return;
+        fprintf (stderr, "CPXunloadprob failed, error code %d.\n", status);
+        return;
       }
       lp = NULL; /*PWOF*/
       lpJJ--;
       if ( lpJJ==0 ) {
-         status = CPXcloseCPLEX (&CPLEXv::Env);
-         if ( status ) {
-            CPXgeterrorstring ( CPLEXv::Env , status, errmsg);
-            fprintf (stderr, "Could not close CPLEX environment.\n%s",errmsg);
-            return;
-         }
-         CPLEXv::Env = NULL;
+        status = CPXcloseCPLEX (&CPLEXv::Env);
+        if ( status ) {
+          CPXgeterrorstring ( CPLEXv::Env , status, errmsg);
+          fprintf (stderr, "Could not close CPLEX environment.\n%s",errmsg);
+          return;
+        }
+        CPLEXv::Env = NULL;
       }
    }
 #endif
